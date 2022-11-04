@@ -1,47 +1,44 @@
 // Variable
 
-const addTask = document.getElementById("add-task");
-const taskContainer = document.getElementById("task-container");
-const inputTask = document.getElementById("input-task");
+const inputArea = document.getElementById("input-area");
+const addBtn = document.getElementById("add-btn");
+const taskContainer = document.getElementById("task-container")
 
 // Event Listener for Add Button
 
-addTask.addEventListener("click", function() {
+addBtn.addEventListener("click", function() {
 
     let taskItem = document.createElement("div");
     taskItem.classList.add("task-item");
 
     let li = document.createElement("li");
-    li.innerText = `${inputTask.value}`;
-    taskItem.append(li); // String Obj
+    li.innerText = `${inputArea.value}`;
+    taskItem.append(li);
 
-    let checkButton = document.createElement("button");
-    checkButton.innerHTML = `<i class="fa-solid fa-check"></i>`;
-    checkButton.classList.add("checkTask");
-    taskItem.appendChild(checkButton); // Node Obj
+    let checkBtn = document.createElement("button");
+    checkBtn.classList.add("check-btn");
+    checkBtn.innerHTML = `<i class="fa-solid fa-check"></i>`;
+    taskItem.appendChild(checkBtn);
 
-    let deleteButton = document.createElement("button");
-    deleteButton.innerHTML = `<i class="fa-solid fa-trash-can"></i>`;
-    deleteButton.classList.add("deleteTask");
-    taskItem.appendChild(deleteButton);
+    let deleteBtn = document.createElement("button");
+    deleteBtn.classList.add("delete-btn");
+    deleteBtn.innerHTML = `<i class="fa-solid fa-trash-can"></i>`;
+    taskItem.appendChild(deleteBtn);
 
-
-    if(inputTask.value === "") {
-        alert("Please Enter a Task");
+    if (inputArea.value === "") {
+        alert("Please input a task!")
     } else {
-        taskContainer.appendChild(taskItem);
-    }
+        taskContainer.appendChild(taskItem);   
+    };
 
-    checkButton.addEventListener("click", function() {
-
-        checkButton.parentElement.style.textDecoration = 
-        "line-through";
+    checkBtn.addEventListener("click", function() {
+       
+       checkBtn.parentElement.style.textDecoration = 
+       "line-through";
     });
 
-    deleteButton.addEventListener("click", function(e) {
-
-        let target = e.target;
-        // trash bin        .div
-        target.parentElement.parentElement.remove();
+    deleteBtn.addEventListener("click", function() {
+        
+        deleteBtn.parentElement.remove();
     });
 });
