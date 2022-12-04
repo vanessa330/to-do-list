@@ -1,3 +1,3 @@
 # To Do List
 
-### Using HTML, CSS, Javascript.
+### Using HTML, CSS, Javascript and jQuery

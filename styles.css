@@ -1,95 +1,56 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Courier New', Courier, monospace;
+    box-sizing: border-box;
+}
+
 body {
-    background-color: rgb(234, 227, 227);
-    height: 100vh;
+    background: linear-gradient(0.25turn, #4d7f94, #8d9d81, #ae7941);
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+    padding: 10px;
 }
 
 h1 {
-    color: rgba(0, 0, 0, 0.66);
     text-align: center;
+    margin: 5%;
 }
 
-#add-task-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 22rem;
-    height: 2.5rem;
-
-    margin: 3rem auto;
-    border: 1px solid grey;
-    border-radius: 10px;
-    padding: 0.7rem;
-    background-color: #fff;
+.add-task {
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.543);
+    background-color: transparent;
+    padding: 10px;
+    outline: none;
+    font-size: 18px;
 }
 
-#input-area {
-    flex: 5;
-    margin: 0.5rem;
-    height: 1.9rem;
-    border-radius: 3px;
-}
-
-#add-btn {
-    flex: 1;
-    margin: 0.5rem;
-
-    background-color: #fff;
-    color: green;
-    margin-right: 10px;
-    border: solid 2px green;
+h2 {
     font-size: 1.5rem;
+    margin: 20px 0;
 }
 
-#add-btn:hover {
-    background-color: green;
+.task {
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 18px;
+    margin: 6px 0;
+    overflow: hidden;
+}
+
+.task i {
+    float: right;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+.completed .task {
+    background-color: rgba(0,0,0,0.5);
     color: #fff;
 }
-
-/* Styling for task items when get added */
-
-.task-item {
-    width: 22rem;
-    background-color: #fff;
-    
-    margin: 0.5rem auto;
-    padding: 1rem;
-    border-radius: 10px;
-
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.task-item li {
-    flex: 4;
-}
-
-.task-item button {
-    flex: 1;
-}
-
-.task-item .check-btn {
-    color: orange;
-    margin-right: 10px;
-    border: solid 2px orange;
-    font-size: 1.5rem;
-}
-
-.task-item .check-btn:hover {
-    background-color: orange;
-    color: #fff;
-}
-
-.task-item .delete-btn {
-    color: red;
-    border: solid 2px red;
-    font-size: 1.3rem;
-}
-
-.task-item .delete-btn:hover {
-    background-color: red;
-    color: #fff;
-}
-
-
-
